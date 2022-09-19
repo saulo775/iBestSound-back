@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  app-ibest_sound: 
+    build: .
+    container_name: app-ibest_sound
+    restart: always
+    ports:
+      - 5500:5500
+    volumes:
+      - .:/usr/app
