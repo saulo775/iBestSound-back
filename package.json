@@ -7,9 +7,13 @@
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
   },
   "dependencies": {
+    "@prisma/client": "^4.3.1",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "0.2.45",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
@@ -26,6 +30,7 @@
     "eslint-plugin-import-helpers": "^1.2.1",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
+    "prisma": "^4.4.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.3"
   },

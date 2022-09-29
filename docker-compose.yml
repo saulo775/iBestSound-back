@@ -1,10 +1,31 @@
 version: '3.7'
 services:
+  database_ibestsound:
+    image: postgres
+    container_name: database_ibestsound
+    hostname: database_ibestsound
+    restart: always
+    ports: 
+      - 5432:5432
+    env_file:
+      - .env
+    volumes:
+      - pgdata:/data/postgres
   app-ibest_sound: 
     build: .
     container_name: app-ibest_sound
     restart: always
     ports:
       - 5500:5500
-    volumes:
+    volumes: 
       - .:/usr/app
+    links: 
+      - database_ibestsound
+    depends_on:
+      - database_ibestsound
+    env_file:
+      - .env
+volumes:
+  pgdata:
+    driver: local
+    
